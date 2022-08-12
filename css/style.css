@@ -1171,15 +1171,16 @@ body {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
-  fill: rgba(0, 0, 0, 1);
+  fill: #000;
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn :hover {
+.modal-close-btn:hover {
   fill: var(--accent-color);
 }
+
 /*============================/MODAL BTN===========================================*/
 /*===========================MODAL FORM================================*/
 .modal-form-tittle {
@@ -1258,7 +1259,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   transition: border-color 250ms, cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-mesage:focus {
@@ -1266,7 +1267,7 @@ body {
   border-color: var(--accent-color);
 }
 
-.modal-form-mesage:placeholder {
+.modal-form-mesage::placeholder {
   color: rgba(117, 117, 117, 0.5);
   font-family: Roboto, sans-serif;
   font-weight: 400;
@@ -1316,7 +1317,7 @@ body {
   letter-spacing: 00.03em;
   color: #757575;
   display: flex;
-  align-items: center;
+  justify-content: center;
 }
 .modal-form-check-desc-href {
   font-family: Roboto, sans-serif;
