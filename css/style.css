@@ -1275,8 +1275,8 @@ body {
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
-
-.modal-form-check-desc::before {
+/*checkbox*/
+/*.modal-form-check-desc::before {
   display: block;
   content: "";
   border: 1px solid #212121;
@@ -1286,7 +1286,7 @@ body {
   background-color: #ffffff;
   margin-right: 7px;
 }
-/*====не працює фокус====*/
+/*====не працює фокус====
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-image: url(../images/icon-check.svg);
   background-size: cover;
@@ -1331,7 +1331,74 @@ body {
   text-decoration: none;
   text-decoration: underline 1px solid var(--accent-color);
 }
+*/
 /*===не вдається задати тінь кнопці===*/
+/*CHECKBOX@*/
+.modal-form-check-desc::before {
+  display: block;
+  content: "";
+  border: 1px solid #212121;
+  width: 16px;
+  height: 15px;
+  cursor: pointer;
+  background-color: #ffffff;
+  margin-right: 7px;
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  border: 0;
+  transition: background-color, background-image, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-check:focus + .modal-form-check-desc::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  border: 0;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.modal-form-check-desc {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 00.03em;
+  color: #757575;
+  display: flex;
+  justify-content: center;
+}
+.modal-form-check-desc-href {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 00.03em;
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-decoration: underline 1px solid var(--accent-color);
+}
+/*CHECKBOX@*/
 .modal-form-submit {
   width: 200px;
   height: 50px;
